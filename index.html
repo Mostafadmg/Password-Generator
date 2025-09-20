@@ -39,32 +39,46 @@
                 <label for="slider">Character Length</label>
                 <span>10</span>
               </div>
-              <input
-                type="range"
-                class="slider"
-                id="slider"
-                min="4"
-                max="20"
-                value="10"
-              />
+              <div class="slide-div">
+                <input
+                  type="range"
+                  class="slider"
+                  id="slider"
+                  min="4"
+                  max="20"
+                  value="10"
+                />
+              </div>
             </div>
 
             <div class="checkbox-items">
               <div class="checkbox-input">
                 <label for="uppercase">Include Uppercase Letters</label>
-                <input type="checkbox" id="uppercase" value="uppercase" />
+                <label class="toggle-switch">
+                  <input type="checkbox" id="uppercase" value="uppercase" class="input"/>
+                  <span class="toggle-slider"></span>
+                </label>
               </div>
               <div class="checkbox-input">
                 <label for="lowercase">Include Lowercase Letters</label>
-                <input type="checkbox" id="lowercase" value="lowercase" />
+                <label class="toggle-switch">
+                  <input type="checkbox" id="lowercase" value="lowercase" class="input"/>
+                  <span class="toggle-slider"></span>
+                </label>
               </div>
               <div class="checkbox-input">
                 <label for="numbers">Include Numbers</label>
-                <input type="checkbox" id="numbers" value="numbers" />
+                <label class="toggle-switch">
+                  <input type="checkbox" id="numbers" value="numbers" class="input"/>
+                  <span class="toggle-slider"></span>
+                </label>
               </div>
               <div class="checkbox-input">
                 <label for="symbols">Include Symbols</label>
-                <input type="checkbox" id="symbols" value="symbols" />
+                <label class="toggle-switch">
+                  <input type="checkbox" id="symbols" value="symbols" class="input"/>
+                  <span class="toggle-slider"></span>
+                </label>
               </div>
             </div>
 
