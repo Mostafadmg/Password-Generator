@@ -1,0 +1,188 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root CSS Variables */
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Grey Scale */
+  --grey-950: #0d070b;
+  --grey-900: #1c1418;
+  --grey-850: #2b232a;
+  --grey-800: #3a323c;
+  --grey-700: #4a434e;
+  --grey-600: #817d92;
+  --grey-500: #a4a4aa;
+  --grey-400: #c8c8cc;
+  --grey-300: #e6e5ea;
+  --grey-200: #f8f9fa;
+
+  /* Brand Colors */
+  --green-200: #a4ffaf;
+  --yellow-300: #f8cd65;
+  --orange-400: #fb7c58;
+  --red-500: #f64a4a;
+
+  /* Spacing Variables */
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-700: 56px;
+  --spacing-1000: 80px;
+  --spacing-1300: 104px;
+  --spacing-1600: 128px;
+  --spacing-2000: 160px;
+  --spacing-2200: 176px;
+  --spacing-2300: 184px;
+
+  /* Typography */
+  --font-family: "JetBrains Mono", monospace;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+}
+
+/* Base styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--grey-200);
+  background-color: var(--grey-950);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* h1 title ==> password generator */
+h1 {
+  color: var(--colors-grey-600, #817d92);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Text Preset 4 - JetBrains Mono Bold - 16px - 20px Line Height - 0px Line Spacing */
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+.form-container {
+  padding: var(--spacing-200);
+  background-color: hsl(248, 10%, 15%);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+}
+.password-display {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(248, 10%, 15%);
+  width: 100%;
+  padding: var(--spacing-200);
+}
+.character-length-text {
+  /* Text Preset 3 - JetBrains Mono Bold - 24px - 30px Line Height - 0px Line Spacing */
+  display: flex;
+  justify-content: space-between;
+}
+.character-length-text span {
+  font-family: "JetBrains Mono";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  color: var(--green-200);
+}
+.character-length {
+  width: 100%;
+}
+
+#slider {
+  width: 100%;
+  background: var(--grey-850, #18171f);
+  border-radius: 4px;
+  outline: none;
+}
+
+.checkbox-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.checkbox-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-400);
+}
+
+.strength-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-100);
+  background-color: var(--grey-950);
+  padding: var(--spacing-200);
+}
+
+.btn {
+  padding: var(--spacing-200) var(--spacing-1300);
+  background-color: var(--green-200);
+  border: none;
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.btn:hover {
+  border: 2px solid var(--green-200);
+  background-color: hsl(248, 10%, 15%);
+  color: var(--green-200);
+}
+.btn:hover img {
+  filter: invert(62%) sepia(80%) saturate(500%) hue-rotate(80deg);
+}
+/* create the slide buttons */

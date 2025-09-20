@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1>Password Generator</h1>
+      <div class="container">
+        <div class="password-display">
+          <p>i3IEeUMx1rICio2kEUj</p>
+          <div class="copy-div">
+            <span class="copied-text"></span>
+            <img src="./assets/images/icon-copy.svg" alt="Copy icon" />
+          </div>
+        </div>
+
+        <form class="form-container">
+          <div class="form-content">
+            <div class="character-length">
+              <div class="character-length-text">
+                <label for="slider">Character Length</label>
+                <span>10</span>
+              </div>
+              <input
+                type="range"
+                class="slider"
+                id="slider"
+                min="4"
+                max="20"
+                value="10"
+              />
+            </div>
+
+            <div class="checkbox-items">
+              <div class="checkbox-input">
+                <label for="uppercase">Include Uppercase Letters</label>
+                <input type="checkbox" id="uppercase" value="uppercase" />
+              </div>
+              <div class="checkbox-input">
+                <label for="lowercase">Include Lowercase Letters</label>
+                <input type="checkbox" id="lowercase" value="lowercase" />
+              </div>
+              <div class="checkbox-input">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" value="numbers" />
+              </div>
+              <div class="checkbox-input">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" value="symbols" />
+              </div>
+            </div>
+
+            <div class="strength-box">
+              <span class="strength-text">Strength</span>
+              <div class="strength-rating">
+                <span class="strength-rating-text">Weak</span>
+                <div class="strength-bars">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn">
+              GENERATE
+              <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
+            </button>
+          </div>
+          <!-- closes .form-content -->
+        </form>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
