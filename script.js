@@ -188,3 +188,4 @@ symbolsCheckbox.addEventListener("change", updateStrength);
 
 updateSlider();
 updateStrength();
+-m;
