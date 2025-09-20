@@ -96,10 +96,14 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-200);
+  width: 100%;
+  padding-inline: 1rem;
+  max-width: 600px;
 }
 .container {
   width: 100%;
   display: flex;
+
   flex-direction: column;
   gap: var(--spacing-200);
 }
@@ -181,6 +185,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: 1.25rem;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -194,7 +199,7 @@ h1 {
 /* Toggle Switch Styles */
 
 .toggle-switch {
-  position:relative;
+  position: relative;
   display: inline-block;
   width: 44px;
   height: 24px;
@@ -202,9 +207,8 @@ h1 {
   /* background-color: red; */
 }
 
-
 .toggle-switch input {
-  opacity: 0;  /* Makes it invisible */
+  opacity: 0; /* Makes it invisible */
   width: 0;
   height: 0;
 }
@@ -218,8 +222,7 @@ h1 {
   transition: 0.3s;
 }
 
-
-.toggle-slider::before{
+.toggle-slider::before {
   position: absolute;
   content: "";
   height: 21px;
@@ -229,7 +232,6 @@ h1 {
   top: 1.5px;
   left: 2px;
   transition: 0.3s;
-
 }
 
 .toggle-switch input:checked + .toggle-slider {
@@ -250,12 +252,12 @@ h1 {
   -webkit-appearance: none;
   width: 100%;
   height: 15px;
-  border-radius: 5px;  
+  border-radius: 5px;
   background-color: var(--grey-850); /* Change this to your desired color */
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slide-div {
@@ -265,37 +267,37 @@ h1 {
   opacity: 1; /* Fully shown on mouse-over */
 }
 
-
 .copy {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.copy:hover{
+.copy:hover {
   filter: brightness(85%) saturate(170%);
 
-  transform: translateY(-2px) scale(1.05);;
+  transform: translateY(-2px) scale(1.05);
 }
 
-.copy:active{
+.copy:active {
   transform: translateY(1px) scale(1);
 }
-.strength-rating{
+.strength-rating {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-200);
 }
 
-.strength-bars{
+.strength-bars {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-100);}
+  gap: var(--spacing-100);
+}
 
 .bar {
   width: 0.625rem;
   height: 1.75rem;
-  border:1px solid white;
+  border: 1px solid white;
 }
 /* Adjust the slider thumb for WebKit browsers */
 .slider::-webkit-slider-thumb {
@@ -303,7 +305,7 @@ h1 {
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: var(--green-200);
   cursor: pointer;
   position: relative;
@@ -337,23 +339,79 @@ h1 {
 
 /* Explicitly style the slider track for WebKit browsers */
 .slider::-webkit-slider-runnable-track {
-  background-color: var(--grey-900); /* Updated to a more noticeable grey */
+  /*  background-color: var(--grey-900);  */
   height: 15px;
   border-radius: 5px;
 }
 
 /* Explicitly style the slider track for Firefox */
 .slider::-moz-range-track {
-  background-color: var(--grey-900); /* Updated to a more noticeable grey */
+  /* background-color: var(--grey-900);  */
   height: 15px;
   border-radius: 5px;
 }
 
 /* Explicitly style the slider track for Internet Explorer */
 .slider::-ms-track {
-  background-color: var(--grey-900); /* Updated to a more noticeable grey */
+  /*  background-color: var(--grey-900);  */
   height: 15px;
   border-radius: 5px;
   border: none;
   color: transparent; /* Hides the default track */
+}
+.password-display.error {
+  background-color: #902b2097;
+  color: var(--white);
+  border: 2px solid #d32f2f;
+
+  animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+.password-display.error p {
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+}
+.copied-text {
+  color: var(--green-200);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.875rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+.copied-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copy-div {
+  display: flex;
+  align-items: center;
+}
+
+.strength-rating-text {
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.bar {
+  width: 0.625rem;
+  height: 1.75rem;
+  border: 1px solid white;
+  transition: all 0.3s ease; /* Add this line */
 }

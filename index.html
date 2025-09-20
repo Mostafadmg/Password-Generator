@@ -28,9 +28,9 @@
           <p>i3IEeUMx1rICio2kEUj</p>
           <div class="copy-div">
             <span class="copied-text"></span>
-           <div class="copy">
-            <img src="./assets/images/icon-copy.svg" alt="Copy icon" />
-           </div> 
+            <div class="copy">
+              <img src="./assets/images/icon-copy.svg" alt="Copy icon" />
+            </div>
           </div>
         </div>
 
@@ -38,17 +38,17 @@
           <div class="form-content">
             <div class="character-length">
               <div class="character-length-text">
-                <label for="slider">Character Length</label>
-                <span>10</span>
+                <label id="slider-label" for="slider">Character Length</label>
+                <span id="slider-count">8</span>
               </div>
               <div class="slide-div">
                 <input
                   type="range"
                   class="slider"
                   id="slider"
-                  min="4"
-                  max="20"
-                  value="10"
+                  min="8"
+                  max="25"
+                  value="8"
                 />
               </div>
             </div>
@@ -57,28 +57,28 @@
               <div class="checkbox-input">
                 <label for="uppercase">Include Uppercase Letters</label>
                 <label class="toggle-switch">
-                  <input type="checkbox" id="uppercase" value="uppercase" class="input"/>
+                  <input type="checkbox" id="uppercase" value="uppercase" class="input" />
                   <span class="toggle-slider"></span>
                 </label>
               </div>
               <div class="checkbox-input">
                 <label for="lowercase">Include Lowercase Letters</label>
                 <label class="toggle-switch">
-                  <input type="checkbox" id="lowercase" value="lowercase" class="input"/>
+                  <input type="checkbox" id="lowercase" value="lowercase" class="input" />
                   <span class="toggle-slider"></span>
                 </label>
               </div>
               <div class="checkbox-input">
                 <label for="numbers">Include Numbers</label>
                 <label class="toggle-switch">
-                  <input type="checkbox" id="numbers" value="numbers" class="input"/>
+                  <input type="checkbox" id="numbers" value="numbers" class="input" />
                   <span class="toggle-slider"></span>
                 </label>
               </div>
               <div class="checkbox-input">
                 <label for="symbols">Include Symbols</label>
                 <label class="toggle-switch">
-                  <input type="checkbox" id="symbols" value="symbols" class="input"/>
+                  <input type="checkbox" id="symbols" value="symbols" class="input" />
                   <span class="toggle-slider"></span>
                 </label>
               </div>
@@ -96,7 +96,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn">
+            <button type="button" class="btn" id="btn">
               GENERATE
               <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
             </button>
